@@ -51,11 +51,20 @@
         {
           rust-project = {
             crates."game" = {
-              crane.args = {
-                buildInputs = dependencies;
-                strictDeps = true;
-                CARGO_BUILD_TARGET = "x86_64-unknown-linux-musl";
-                CARGO_BUILD_RUSTFLAGS = "-C target-feature=+crt-static";
+              crane = {
+                args = {
+                  buildInputs = dependencies;
+                  strictDeps = true;
+                  # Static build does not work
+                  #CARGO_BUILD_TARGET = "x86_64-unknown-linux-musl";
+                  #CARGO_BUILD_RUSTFLAGS = "-C target-feature=+crt-static";
+                };
+                extraBuildArgs = {
+                  postFixup = ''
+                    wrapProgram $out/bin/game \
+                      --set LD_LIBRARY_PATH ${lib.makeLibraryPath dependencies}
+                  '';
+                };
               };
             };
           };
