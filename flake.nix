@@ -58,6 +58,14 @@
             treefmt.enable = true;
             rust.enable = true;
             convco.enable = true;
+            run = {
+              enable = true;
+              justfile = ''
+                # Compile and run the project
+                run:
+                  cargo run
+              '';
+            };
           };
 
           # Add your auto-formatters here.

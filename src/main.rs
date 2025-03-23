@@ -3,5 +3,6 @@ use macroquad::prelude::*;
 async fn main() {
     loop {
         clear_background(RED);
+        next_frame().await;
     }
 }
