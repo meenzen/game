@@ -45,6 +45,7 @@
             xorg.libX11
             xorg.libXi
             libxkbcommon
+            wayland
           ];
         in
         {
