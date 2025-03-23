@@ -1,2 +1,11 @@
-/target
+# Rust
+target
+
+# Editors
 .idea/
+
+# Nix
+.direnv/
+result
+/.pre-commit-config.yaml
+/just-flake.just
