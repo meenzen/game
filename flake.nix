@@ -49,6 +49,8 @@
           ];
         in
         {
+          packages.default = self'.packages.game;
+
           rust-project = {
             crates."game" = {
               crane = {
