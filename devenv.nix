@@ -24,6 +24,7 @@
   });
 in {
   cachix.push = "meenzen";
+  cachix.pull = ["nix-community"];
 
   env.LD_LIBRARY_PATH = lib.makeLibraryPath dependencies;
   packages = [
