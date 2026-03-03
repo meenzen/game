@@ -5,7 +5,15 @@ target
 .idea/
 
 # Nix
-.direnv/
 result
-/.pre-commit-config.yaml
-/just-flake.just
+
+# Devenv
+.devenv*
+devenv.local.nix
+devenv.local.yaml
+
+# direnv
+.direnv
+
+# pre-commit
+.pre-commit-config.yaml
