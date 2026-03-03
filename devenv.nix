@@ -23,6 +23,8 @@
       '';
   });
 in {
+  cachix.push = "meenzen";
+
   env.LD_LIBRARY_PATH = lib.makeLibraryPath dependencies;
   packages = [
     pkgs.git
