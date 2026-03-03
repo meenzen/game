@@ -36,6 +36,7 @@ in {
     alejandra.enable = true;
     actionlint.enable = true;
     check-added-large-files.enable = true;
+    clippy.enable = true;
     end-of-file-fixer.enable = true;
     fix-byte-order-marker.enable = true;
     forbid-new-submodules.enable = true;
